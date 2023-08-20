@@ -47,6 +47,7 @@ body {
       color: red;
       position: relative;
       cursor: pointer;
+      transition: all 1.2s;
     }
 
     .show {
@@ -74,7 +75,7 @@ body {
       overflow: auto;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
-      top: 0;
+      top: 50px;
       right: 0;
 
       li {
@@ -88,7 +89,7 @@ body {
           line-height: 30px;
           letter-spacing: 0.035px;
           white-space: nowrap;
-          padding: 12px 16px;
+          padding: 4px 4px;
           text-decoration: none;
           display: block;
         }
@@ -97,13 +98,12 @@ body {
           color: red;
         }
       }
-    }
 
-    &.active {
-      display: block;
-      position: absolute;
+      &.active {
+        display: block;
+        position: absolute;
+      }
     }
-
   }
 
   .banner {
@@ -1347,7 +1347,7 @@ body {
       overflow: auto;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
-      top: 0;
+      top: 50px;
       right: 0;
 
       li {
@@ -1361,7 +1361,7 @@ body {
           line-height: 30px;
           letter-spacing: 0.035px;
           white-space: nowrap;
-          padding: 12px 16px;
+          padding: 6px 8px;
           text-decoration: none;
           display: block;
         }
