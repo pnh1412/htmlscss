@@ -7,9 +7,9 @@
   <link rel="preconnect" href="//fdn.fontcdn.ir">
   <link rel="preconnect" href="//v1.fontapi.ir">
   <link href="https://v1.fontapi.ir/css/SFProDisplay" rel="stylesheet">
-  <link rel="stylesheet" href="/baitap2/style.css">
-  <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" />
-  <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./dist/style.css">
+  <link rel="stylesheet" type="text/css" href="/baitap2/src/slick-1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="/baitap2/src/slick-1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <title>Bai Tap</title>
 </head>
@@ -21,10 +21,10 @@
         <div class="navbar__logo">
           <img src="src/images/VDV_VN_RGB 1.png" alt="logo" width="56" height="56">
         </div>
-        <div class="icon" id="dropdownIcon"><i class="fas fa-bars" onclick="myFunction()"></i>
+        <div class="icon" id="dropdownIcon"><i class="fas fa-bars" onclick="clickFunction()"></i>
         </div>
         <ul class="navbar__menu" id="dropdown">
-          <li><a href="#http://127.0.0.1:5500/baitap2/index.html#home">Trang chu</a></li>
+          <li><a href="#home">Trang chu</a></li>
           <li><a href="#home">Du an VDV la gi</a></li>
           <li><a href="#home">Mo hinh dao tao kep</a></li>
           <li><a href="#home">Truong</a></li>
@@ -197,7 +197,6 @@
         <div class="content__item-reverse-col-left">
           <div class="content__item-reverse-image">
             <img src="/baitap2/src/images/attractive-asian-male-student-with-textbook-though-ZRQW84R 1.png" alt="">
-            <div class="content__item-reverse image-shadow"></div>
           </div>
         </div>
 
@@ -304,7 +303,7 @@
             Những doanh nghiệp tham gia dự án VDV có trác>h nhiệm tạo cơ hội học tập cho sinh viên học nghề như sau:
           </p>
 
-          <div class="content__item-block">
+          <div class="content__item-block diff">
             <div class="content__block__col-left">
               <ul>
 
@@ -562,11 +561,12 @@
 
     </footer>
 </body>
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick-1.8.1/slick/slick.js"></script>
-<script type="text/javascript">
+<script type="text/javascript" src="/baitap2/src/slick-1.8.1/slick/slick.js"></script>
+<script type="text/javascript" src="./dist/app.js"></script>
+<script>
   $(document).ready(function () {
     $('.slider__block').slick({
       infinite: false,
@@ -588,10 +588,11 @@
     });
   });
 
-  function myFunction() {
+  function clickFunction() {
     $(".navbar__menu").toggleClass('show');
     // document.getElementsByClassName(".navbar__menu").classList.toggle("show");
   }
+
 
   // Close the dropdown if the user clicks outside of it
   window.onclick = function (event) {
@@ -606,12 +607,14 @@
       }
     }
   }
+
   // bat su kien click ra ngoai button
   document.addEventListener("click", function (event) {
     if (!dropdown.contains(event.target) && !dropdownIcon.contains(event.target)) {
       dropdown.classList.remove("show");
     }
   });
+
 </script>
 
 </html>
